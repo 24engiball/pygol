@@ -61,6 +61,7 @@ for std in stdlist:
         repo = g.get_repo(std[4])
         commit = repo.get_commit(repo.get_commits()[0].sha).raw_data['commit']['message']
         std.append(commit)
+        
 
 while True:
     try:
