@@ -79,8 +79,10 @@ while True:
     
         for i in range(len(stdlist)):
             with term.location(10, i+2):
-                print(stdlist[i][5] + "                 ")
-
+                if(stdlist[i][5] == stdlist[0][5]):
+                    print(term.green + stdlist[i][5] + term.normal+ "                 ")
+                else:
+                    print(term.red + stdlist[i][5] + term.normal+ "                 ")
             time.sleep(1)
 
         for std in stdlist:
