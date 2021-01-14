@@ -1,8 +1,9 @@
 from github import Github
 import os
 import ui
-import curses
+#import curses
 import time
+from blessings import Terminal
 
 f = open('key.key','r')
 key = f.read()
@@ -51,10 +52,8 @@ for std in std_data:
 # #  ... and more!
 
 
-scr = curses.initscr()
-for i in range(len(stdlist)):
+# scr = curses.initscr()
 
-    scr.addstr(i, 0, stdlist[i][0])
  
 
 for std in stdlist:
@@ -62,13 +61,26 @@ for std in stdlist:
         commit = repo.get_commit(repo.get_commits()[0].sha).raw_data['commit']['message']
         std.append(commit)
         
+term = Terminal()
+
+
+
+for std in stdlist:
+            repo = g.get_repo(std[4])
+            commit = repo.get_commit(repo.get_commits()[0].sha).raw_data['commit']['message']
+            std[5] = commit
+for i in range(len(stdlist)):
+
+    with term.location(0, i+2):
+                print(stdlist[i][0] + "                                            ")
 
 while True:
     try:
     
         for i in range(len(stdlist)):
-            scr.addstr(i, 10, stdlist[i][5] + "                 ")
-            scr.refresh()
+            with term.location(10, i+2):
+                print(stdlist[i][5] + "                 ")
+
             time.sleep(1)
 
         for std in stdlist:
