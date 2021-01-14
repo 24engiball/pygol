@@ -74,6 +74,7 @@ for i in range(len(stdlist)):
     with term.location(0, i+2):
                 print(stdlist[i][0] + "                                            ")
 
+
 while True:
     try:
     
