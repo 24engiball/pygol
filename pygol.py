@@ -19,7 +19,6 @@ g = Github(key)
 for std in std_data:
     std = std.split()
     stdlist.append(std)
-
  
 term = Terminal()
 print(term.home + term.clear)
@@ -55,5 +54,4 @@ while True:
         exit()
     except Exception as e:
         print(e)
-        
         exit() 
