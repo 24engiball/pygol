@@ -63,13 +63,16 @@ for std in stdlist:
         std.append(commit)
 
 while True:
+    try:
     
-    for i in range(len(stdlist)):
-        scr.addstr(i, 10, stdlist[i][5])
-        scr.refresh()
-        time.sleep(1)
+        for i in range(len(stdlist)):
+            scr.addstr(i, 10, stdlist[i][5] + "                 ")
+            scr.refresh()
+            time.sleep(1)
 
-    for std in stdlist:
-        repo = g.get_repo(std[4])
-        commit = repo.get_commit(repo.get_commits()[0].sha).raw_data['commit']['message']
-        std[5] = commit
+        for std in stdlist:
+            repo = g.get_repo(std[4])
+            commit = repo.get_commit(repo.get_commits()[0].sha).raw_data['commit']['message']
+            std[5] = commit
+    except:
+        exit()
