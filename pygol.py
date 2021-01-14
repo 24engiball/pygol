@@ -1,16 +1,15 @@
 from github import Github
+import os
 
-# First create a Github instance:
+f = open('key.key','r')
+key = f.read()
 
-# using username and password
-g = Github("24engiball", "engiballp@55")
+g = Github(key)
 
-# or using an access token
-#g = Github("access_token")
+repo = g.get_repo("24engiball/pygol")
 
-# Github Enterprise with custom hostname
-#g = Github(base_url="https://{hostname}/api/v3", login_or_token="access_token")
+data = repo.get_commits()
 
-# Then play with your Github objects:
-for repo in g.get_user().get_repos():
-    print(repo.name)
+print(data[0].sha)
+text = repo.get_git_commit(data[0].sha)
+print(text)
