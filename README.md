@@ -23,8 +23,10 @@ python3 pygol.py [ชื่อไฟล์].txt<br/>
 
 python3 pygol.py data.txt
 
-![](githubsetting.png)
+
+เมื่อมีเด็กส่งงาน commit ตาม task ที่กำหนด ก็จะเปลี่ยนข้อความ commit เป็นสีเขียว
 
 ![](ex2.png) ![](ex.png)
 
 
+![](githubsetting.png)
