@@ -3,12 +3,13 @@ import os
 import time
 from blessings import Terminal
 from datetime import datetime
-
+import sys
 f = open('key.key','r')
 key = f.read()
 f.close()
 
-f = open('data.txt','r')
+input = sys.argv
+f = open(str(input[1]) +'.txt','r')
 std_data = f.read()
 f.close()
 
