@@ -7,7 +7,7 @@ f = open('key.key','r')
 key = f.read()
 f.close()
 
-f = open('md_data.txt','r')
+f = open('data.txt','r')
 std_data = f.read()
 f.close()
 
