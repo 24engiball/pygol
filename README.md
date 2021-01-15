@@ -6,6 +6,13 @@ python3 -m pip install  blessings <br/>
 
 
 2 สร้างไฟล์ github token key ชื่อ key.key<br/>
+เข้าไปที่เมนู https://github.com/settings/profile -> Develper Settings 
+เลือก Personal access tokens จะมีปุ่ม Generate new token เอารหัส token ที่ได้ไปวางไว้ในไฟล์ชื่อ key.key
+
+![](githubsetting.png)
+
+
+
 3 สร้างไฟล์ data.txt<br/>
 
 รหัสนักศึกษา ชื่อ นามสกุล username/gitrepo โดยที่คนแรกเป็นชื่ออาจารย์เพื่อใช้เปรียบเทียบ git commit message
@@ -29,4 +36,3 @@ python3 pygol.py data.txt
 ![](ex2.png) ![](ex.png)
 
 
-![](githubsetting.png)
