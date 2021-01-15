@@ -25,8 +25,6 @@ python3 pygol.py data.txt
 
 ![](githubsetting.png)
 
-![](ex.png)
-
-![](ex2.png)
+![](ex2.png) ![](ex.png)
 
 
