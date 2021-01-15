@@ -2,6 +2,7 @@ from github import Github
 import os
 import time
 from blessings import Terminal
+from datetime import datetime
 
 f = open('key.key','r')
 key = f.read()
@@ -45,6 +46,10 @@ while True:
                     print(term.green + stdlist[i][5][0:31] + "     " + term.normal)
                 else:
                     print(term.red + stdlist[i][5][0:31]  + "     "+ term.normal)
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        with term.location(0,len(stdlist)+3):
+            print("last update : " , dt_string)
 
         for std in stdlist:
             
