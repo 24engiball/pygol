@@ -23,5 +23,8 @@ python3 pygol.py [ชื่อไฟล์].txt<br/>
 
 python3 pygol.py data.txt
 
+![](githubsetting.png)
+
+![](ex.png)
 
 
