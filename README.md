@@ -9,7 +9,8 @@ python3 -m pip install  blessings <br/>
 3 สร้างไฟล์ data.txt<br/>
 
 รหัสนักศึกษา ชื่อ นามสกุล username/gitrepo โดยที่คนแรกเป็นชื่ออาจารย์เพื่อใช้เปรียบเทียบ git commit message
-<br/><br/>
+<br/>
+ตัวอย่าง
 
 Techer Master Aj 24engiball/pygol<br/>
 493040269-7 Thee Ball studentUsername/studentGitRepoName<br/>
