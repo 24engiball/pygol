@@ -27,4 +27,6 @@ python3 pygol.py data.txt
 
 ![](ex.png)
 
+![](ex2.png)
+
 
