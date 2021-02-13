@@ -1,12 +1,16 @@
 from github import Github
 import os
 import time
+from time import sleep
 from blessings import Terminal
 from datetime import datetime
 import sys
 f = open('key.key','r')
 key = f.read()
 f.close()
+
+key = key.replace("\n","")
+print("key" +key)
 
 input = sys.argv
 f = open(str(input[1]) +'.txt','r')
@@ -23,7 +27,7 @@ for std in std_data:
     stdlist.append(std)
  
 term = Terminal()
-print(term.home + term.clear)
+#print(term.home + term.clear)
 for std in stdlist:
         try:
             repo = g.get_repo(std[3])
@@ -40,6 +44,7 @@ for i in range(len(stdlist)):
                 print(stdlist[i][1] + "     ")
 
 while True:
+    sleep(30)
     try:
         for i in range(len(stdlist)):
             with term.location(20, i+2):
